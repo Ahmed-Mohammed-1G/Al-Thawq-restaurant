@@ -12,11 +12,11 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
 /*   الهيدر (Bar)   */
 /* --------------- */
 
-.bar { height: 76px; width: min(100% - 8vw, 1440px); border-bottom: solid 1px #a99d93; margin: 0px auto; display: flex; align-items: center; justify-content: space-between; }
+.bar { height: 96px; width: min(100% - 8vw, 1440px); border-bottom: solid 1px #a99d93; margin: 0px auto; display: flex; align-items: center; justify-content: space-between; }
 .web-logo { height: 96px; width: 170px; display: inline-flex; text-decoration: none; }
 .logo-name { height: 96px; width: 90px; }
 .n1 { width: 90px; padding-top: 10px; height: 50px; display: flex; text-align: center; justify-content: center; font-size: 30px; font-weight: 900; color: rgba(255, 7, 7, 0.721); }
-.n2 { height: 26px; position: relative; display: flex; font-size: 12px; color: #a99d93;padding-top: 7px; }
+.n2 { height: 26px; position: relative; display: flex; font-size: 12px; color: #a99d93; }
 .web-img { width: 70px; height: 60px; margin: 15px 0px 15px 10px; }
 .links { width: 300px; height: 96px; display: flex; align-items: center; justify-content: space-around; font-size: 20px; }
 .links a { text-decoration: none; color: #a99d93; transition: .15s ease; }
@@ -52,12 +52,13 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
 /*     Trends      */
 /* --------------- */
 
-.trends { background-color: #F2E7D8; padding: 40px; }
+.trends { background-color: #F2E7D8; padding: 40px; min-height: 100vh; display: flex; flex-direction: column; }
+.trends br { display: none; }
 .ttitle { margin: 0px 20px 10px 0px; position: relative; }
 .ttitle::after { content: ""; display: block; position: absolute; top: 0px; right: -20px; width: 9px; border-radius: 10px; background-color: #d00000; height: 127px; margin: 0px; }
 .tt1 { color: #990000; font-weight: 700; font-size: 20px; }
 .tt2 { font-weight: 900; font-size: 65px; line-height: 90px; color: #120e0deb; }
-.trendm { width: 100%; height: 530px; display: inline-flex; align-items: center; justify-content: center; gap: 100px; margin: 0px auto; }
+.trendm { width: 100%; flex: 1; min-height: 530px; display: inline-flex; align-items: center; justify-content: center; gap: 100px; margin: 40px auto 0; }
 .m { width: 370px; height: 460px; background-color: #eaeaeae4; box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.218); display: flex; flex-direction: column; border-radius: 15px; transition: all 0.2s ease; }
 #m1:hover { box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.388); margin-bottom: 25px; }
 #m1:hover .mimg1 { transform: scale(1.03); }
@@ -102,7 +103,7 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
 .web-logo2 { height: 96px; width: 170px; margin-bottom: -25px; display: inline-flex; text-decoration: none; }
 .logo-name2 { height: 96px; width: 90px; }
 .n12 { width: 90px; padding-top: 10px; height: 50px; display: flex; text-align: center; justify-content: center; font-size: 30px; font-weight: 900; color: rgba(255, 7, 7, 0.721); }
-.n22 { height: 26px; position: relative; display: flex; font-size: 12px; color: #bab0a9;padding-top: 7px; }
+.n22 { height: 26px; position: relative; display: flex; font-size: 12px; color: #bab0a9; }
 .web-img2 { width: 70px; height: 60px; margin: 15px 0px 15px 10px; }
 .adress { margin-top: 20px; width: 150px; font-weight: 600; display: flex; text-align: center; }
 .copy { display: flex; text-align: center; justify-content: center; margin-top: 20px; }
@@ -116,18 +117,18 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
 @media screen and (max-width: 1800px) {
     .container { display: flex; align-items: center; }
     .main { flex: 0 0 auto; padding: 80px 60px 20px 20px; height: auto; min-height: 520px; }
-    .m-img { flex: 1 1 0; min-width: 0; height: 773px;}
-    .m-img img { width: 100%; height: 773px; }
+    .m-img { flex: 1 1 0; min-width: 0; }
+    .m-img img { width: 100%; height: auto; }
     .main2 { font-size: clamp(56px, 6vw, 110px); }
 
-    .trendm { height: auto; gap: 50px; padding-bottom: 30px; }
+    .trendm { min-height: 0; gap: 50px; padding-bottom: 30px; }
     .m { flex: 1 1 0; width: auto; max-width: 370px; min-width: 0; height: auto; padding-bottom: 16px; }
     .mimg { width: auto; height: auto; aspect-ratio: 1 / 1; margin: 10px; }
     .mimg img { width: 100%; height: 100%; object-fit: cover; }
     .description { width: 100%; }
     .mdesc { width: auto; flex: 1; height: auto; }
 
-    .our-story { display: flex; width: 100%;height: 770px; }
+    .our-story { display: flex; width: 100%; }
     .story-img { width: min(570px, 38vw); height: min(570px, 38vw); margin: 80px 60px; flex-shrink: 0; }
     .simg { width: 100%; height: 100%; object-fit: cover; }
     .story { flex: 1; min-width: 0; margin: 80px 40px; }
@@ -236,19 +237,19 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
     .web-img { width: 44px; height: 40px; margin: 12px 0 12px 6px; }
     .logo-name { width: 64px; height: 64px; }
     .n1 { width: 64px; height: 34px; padding-top: 8px; font-size: 22px; }
-    .n2 { height: 20px; font-size: 9px; white-space: nowrap;padding-top: 7px; }
+    .n2 { height: 20px; font-size: 9px; white-space: nowrap; }
     .b-order { width: 96px; height: 38px; font-size: 16px; gap: 10px; }
 
     .web-logo2 { width: 120px; height: 64px; }
     .web-img2 { width: 44px; height: 40px; margin: 12px 0 12px 6px; }
     .logo-name2 { width: 64px; height: 64px; }
     .n12 { width: 64px; height: 34px; padding-top: 8px; font-size: 22px; }
-    .n22 { height: 20px; font-size: 9px; white-space: nowrap;padding-top: 7px; }
+    .n22 { height: 20px; font-size: 9px; white-space: nowrap; }
     .adress { font-size: 12px; }
     .copy { font-size: 10px; }
 
     .m-img { height: 260px; }
-    .main { margin-top: 10px; padding: 0 20px 30px; }
+    .main { margin-top: 40px; padding: 0 20px 30px; }
     .main1 { font-size: 15px; gap: 10px; }
     .m1 { width: 25px; }
     .main2 { font-size: clamp(48px, 15vw, 64px); margin: 10px 0 18px; }
@@ -304,12 +305,12 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
     .web-img { width: 38px; height: 34px; margin: 8px 0 8px 5px; }
     .logo-name { width: 56px; height: 50px; }
     .n1 { width: 56px; height: 28px; padding-top: 6px; font-size: 19px; }
-    .n2 { font-size: 8px;padding-top: 7px; }
+    .n2 { font-size: 8px; }
     .b-order { width: 84px; height: 34px; font-size: 14px; gap: 8px; }
 
     .m-img { height: 210px; }
 
-    .main { margin: 10px 0 0; padding: 0 16px 24px; height: auto; }
+    .main { margin: 40px 0 0; padding: 0 16px 24px; height: auto; }
     .m1 { width: 25px; }
     .main1 { margin-top: 20px; font-size: 15px; gap: 10px; }
     .main2 { font-size: clamp(44px, 14vw, 54px); margin: 10px 0px 20px; }
