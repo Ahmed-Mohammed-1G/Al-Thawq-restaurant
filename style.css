@@ -194,11 +194,11 @@ body { background-color: #120e0d; margin: 0px; font-family: "Cairo", sans-serif;
     .maind { font-size: clamp(18px, 2.4vw, 24px); max-width: min(100%, 640px); }
     .discm { margin: 36px 0 0 20px; width: clamp(150px, 22vw, 210px); height: clamp(46px, 6vw, 60px); font-size: clamp(16px, 2.2vw, 22px); }
 
-    .trends { padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 40px); }
+    .trends { padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 40px); min-height: calc(100vh - 120px); }
     .tt1 { font-size: clamp(14px, 2.4vw, 22px); }
     .tt2 { font-size: clamp(28px, 6vw, 56px); line-height: 1.5; }
     .ttitle::after { height: 110px; }
-    .trendm { --card-h: clamp(160px, calc((100vh - 340px) / 3), 280px); flex-direction: column; gap: 16px; padding: 10px 0 0; }
+    .trendm { --card-h: clamp(145px, calc((100vh - 440px) / 3), 230px); flex-direction: column; gap: 16px; padding: 10px 0 0; }
     #m1 { order: 1; }
     #m2 { order: 2; }
     #m3 { order: 3; }
